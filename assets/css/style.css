@@ -538,7 +538,15 @@ main {
 /**
  * #service 
  */
-
+.tech-family {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tech-family img {
+  max-width: 140px;
+}
 .service {
   margin-bottom: 35px;
 }
