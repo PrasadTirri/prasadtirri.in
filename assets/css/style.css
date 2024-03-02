@@ -2,14 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 @codewithsadee
- */
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
   /**
    * colors
@@ -116,10 +108,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
 }
 
 li {
@@ -234,10 +222,7 @@ article.active {
     opacity: 1;
   }
 }
-a {
-  text-decoration: none;
-  color: unset;
-}
+
 .h2,
 .h3,
 .h4,
@@ -1056,15 +1041,16 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before {
+.project-item > figure:hover .project-img::before {
   background: hsla(0, 0%, 0%, 0.5);
 }
 
 .project-item-icon-box {
   --scale: 0.8;
-
+  display: flex;
+  gap: 1rem;
   background: var(--jet);
-  color: var(--orange-yellow-crayola);
+  color: var(--orange-yellow-crayola) !important;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1076,8 +1062,10 @@ main {
   z-index: 1;
   transition: var(--transition-1);
 }
-
-.project-item > a:hover .project-item-icon-box {
+.project-item-icon-box a {
+  color: var(--orange-yellow-crayola) !important;
+}
+.project-item > figure:hover .project-item-icon-box {
   --scale: 1;
   opacity: 1;
 }
@@ -1093,7 +1081,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover img {
+.project-item > figure:hover img {
   transform: scale(1.1);
 }
 
